@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keisen Chang | Machine Learning Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Keisen Chang, an aspiring Machine Learning Engineer. Showcasing self-taught AI expertise, Coursera certifications, and Python/ML projects.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#030712', /* Deep rich dark slate */
+                            card: '#1f2937',
+                            accent: '#6366f1',
+                            accentHover: '#4f46e5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <!-- Background decorative gradients -->
+    <div class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-indigo-950/20 via-transparent to-transparent pointer-events-none -z-10"></div>
+    <div class="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-500/5 blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute top-[60%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-500/5 blur-[120px] pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="font-display font-bold text-xl tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400">
+                KC<span class="text-zinc-500">.</span>dev
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#education" class="hover:text-indigo-400 transition-colors">Learning Path</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+            <div>
+                <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-indigo-600 hover:bg-indigo-500 transition-colors rounded-lg border border-indigo-400/20">
+                    Get in Touch
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6">
+        <div class="max-w-4xl text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-white/10 text-xs font-medium text-indigo-300 mb-8 mx-auto">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                SIT x NVIDIA AI Centre (SNAIC) Candidate 2026
+            </div>
+            
+            <h1 class="font-display font-bold text-5xl md:text-7xl tracking-tight text-white mb-6">
+                Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-violet-400 to-indigo-300">Keisen Chang</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                An aspiring Machine Learning Engineer proving that deep curiosity, rigorous self-study, and practical code build the best foundations in Artificial Intelligence.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-600/20">
+                    View Projects <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+                <a href="#education" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg border border-slate-700 bg-slate-900/50 hover:bg-slate-800 transition-all hover:border-slate-600 text-slate-300 hover:text-white">
+                    Learning Timeline
+                </a>
+            </div>
+
+            <!-- Social Links / Icons -->
+            <div class="flex items-center justify-center gap-6 mt-12 text-slate-400">
+                <a href="https://github.com/keisenchangqixin" target="_blank" class="hover:text-white transition-colors" title="GitHub">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-white transition-colors" title="LinkedIn">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 border-t border-slate-900 bg-slate-950/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-8 flex items-center gap-3">
+                <i data-lucide="user" class="text-indigo-400"></i> The Self-Taught Path
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="md:col-span-2 space-y-6 text-slate-400 leading-relaxed font-light">
+                    <p>
+                        I believe that credentials are built on competence, not just diplomas. Without a formal university degree in computer science, I have dedicated myself to mastering the core mathematical and computational pillars of Machine Learning through rigorous online study and real-world project builds.
+                    </p>
+                    <p>
+                        My objective is to qualify for the <strong class="text-indigo-400 font-semibold">SIT x NVIDIA AI Centre (SNAIC) AI Programme</strong> by demonstrating hands-on proficiency in building and deploying practical machine learning models.
+                    </p>
+                    <p>
+                        By combining Python programming, statistics, linear algebra, and data science methodologies, I construct and train models locally, deploy them interactively, and document my code using production-level best practices.
+                    </p>
+                </div>
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-400">My Stack</h3>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">NumPy</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Pandas</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Scikit-Learn</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Git / GitHub</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Streamlit</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Linear Algebra</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Multivariate Calculus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-24 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-12 flex items-center gap-3">
+                <i data-lucide="graduation-cap" class="text-indigo-400"></i> Learning Timeline
+            </h2>
+            
+            <div class="space-y-12 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-800">
+                <!-- Cert 1 -->
+                <div class="relative pl-12">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 top-1.5 w-[36px] h-[36px] rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center text-indigo-400">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-xl glow-effect">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest block mb-1">IBM (via Coursera)</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Python for Machine Learning & Data Science</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed font-light">
+                            Comprehensive practical training in Python data ecosystems and core ML algorithms.
+                        </p>
+                        <div class="border-t border-slate-800 pt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-400">
+                            <div><strong>Key Skills:</strong> Pandas, NumPy, Scikit-Learn data pipelines</div>
+                            <div><strong>Projects:</strong> Linear/Logistic Regression models, SVMs, Clustering models</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="relative pl-12">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 top-1.5 w-[36px] h-[36px] rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center text-indigo-400">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-xl glow-effect">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest block mb-1">Imperial College London (via Coursera)</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Mathematics for Machine Learning</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed font-light">
+                            Rigorous foundation in the mathematics underpinning state-of-the-art machine learning algorithms.
+                        </p>
+                        <div class="border-t border-slate-800 pt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-400">
+                            <div><strong>Key Skills:</strong> Linear Algebra (eigenvalues, vectors), Multivariate Calculus</div>
+                            <div><strong>Applications:</strong> Principal Component Analysis (PCA), Gradient Descent optimization</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 border-t border-slate-900 bg-slate-950/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4 flex items-center gap-3">
+                <i data-lucide="code" class="text-indigo-400"></i> Project Showroom
+            </h2>
+            <p class="text-slate-400 mb-12 font-light leading-relaxed">
+                Here are the active and upcoming AI/ML applications I am building. Interactive Streamlit demos will be embedded here as they go live.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 (In Development) -->
+                <div class="glass-card rounded-xl overflow-hidden glow-effect flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                                In Development
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">Regressors</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Housing Price Predictor</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 font-light">
+                            An end-to-end regression model trained on Singapore housing data to forecast property prices. Features custom feature engineering and model tuning with Scikit-Learn.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">Scikit-Learn</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800/40 bg-slate-900/10 flex items-center justify-between">
+                        <span class="text-xs text-indigo-400 font-medium">Coming to Streamlit soon</span>
+                        <a href="https://github.com/keisenchangqixin" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="View Source">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Planned) -->
+                <div class="glass-card rounded-xl overflow-hidden glow-effect flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-400 border border-slate-700">
+                                Planned
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">Neural Networks</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Handwritten Digit Classifier</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 font-light">
+                            A Convolutional Neural Network (CNN) trained on the MNIST dataset. It will allow users to draw numbers directly on a canvas in their browser to classify digits live.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">TensorFlow</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">PyTorch</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-850 text-slate-400">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800/40 bg-slate-900/10 flex items-center justify-between">
+                        <span class="text-xs text-indigo-400 font-medium">Coming soon</span>
+                        <a href="https://github.com/keisenchangqixin" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="View Source">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footnotes Section -->
+    <section id="contact" class="py-24 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display font-bold text-3xl text-white mb-4">Get in Touch</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8 font-light leading-relaxed">
+                If you represent the SNAIC admissions committee, or just want to collaborate on machine learning projects, I would love to hear from you.
+            </p>
+            
+            <a href="mailto:your-email@example.com" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-brand-dark hover:bg-slate-200 transition-colors text-sm font-semibold tracking-wide shadow-xl">
+                <i data-lucide="mail" class="w-4 h-4 mr-2"></i> Send an Email
+            </a>
+            
+            <p class="text-slate-600 text-xs mt-16 font-light">
+                &copy; 2026 Keisen Chang. Built with Tailwind CSS and deployed on Vercel.
+            </p>
+        </div>
+    </section>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
